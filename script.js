@@ -59,3 +59,11 @@ const storyObj = {
     borderColor: "#acd157",
   },
 };
+
+// Step 10
+// Create a function called displayStory. Inside the function, log "You clicked the
+// button" to the console.
+
+function displayStory() {
+  console.log("You clicked the button");
+}
