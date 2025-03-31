@@ -64,6 +64,60 @@ const storyObj = {
 // Create a function called displayStory. Inside the function, log "You clicked the
 // button" to the console.
 
-function displayStory() {
-  console.log("You clicked the button");
+// Step 12
+// Now, you know that the button works. Remove the console.log statement from the displayStory
+// function.
+
+// Step 13
+// To differentiate between the different types of stories, you will need to pass the genre of
+// the selected story to the displayStory function.
+
+// Add a parameter called genre to the displayStory function.
+
+// Step 14
+// Inside the displayStory function, check if the storyObj object has a property that matches the
+// genre parameter and set the #result paragraph's text content to the story of the selected genre.
+
+// Also, set the storyContainer's border color to the borderColor property of the selected genre.
+
+// Test this by calling the displayStory function with the scary genre. The border color should be
+// #ee4b2b and the story should be "In the dark woods, a group of friends stumbled upon an old,
+// abandoned cabin. They enter the cabin and awaken something malevolent that had been dormant for
+// centuries.".
+
+function displayStory(genre) {
+  let property = storyObj.hasOwnProperty(genre);
+  if (property) {
+    resultParagraph.textContent = storyObj[genre].story;
+    storyContainer.style.borderColor = storyObj[genre].borderColor;
+  }
 }
+
+// Step 15
+// Now that the displayStory function is working correctly, it is time to add the functionality to the
+// buttons.
+
+// Before that, remove the displayStory("scary") function call.
+
+// displayStory("scary");
+
+// Step 11
+// Add an event listener for the click event to scaryStoryBtn and pass it the displayStory
+// function. Then, click your button and see the output in the console.
+
+// Step 16
+// Modify the scaryStoryBtn event listener to call the displayStory function with the argument "scary".
+// Also, add a click event listener to the funnyStoryBtn, and adventureStoryBtn buttons that call the
+// displayStory function with the arguments "funny" and "adventure" respectively.
+
+// With this, you have successfully completed the workshop.
+
+scaryStoryBtn.addEventListener("click", function (event) {
+  displayStory("scary");
+});
+funnyStoryBtn.addEventListener("click", function (event) {
+  displayStory("funny");
+});
+adventureStoryBtn.addEventListener("click", function (event) {
+  displayStory("adventure");
+});
