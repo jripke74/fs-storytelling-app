@@ -72,3 +72,13 @@ Inside the displayStory function, check if the storyObj object has a property th
 Also, set the storyContainer's border color to the borderColor property of the selected genre.
 
 Test this by calling the displayStory function with the scary genre. The border color should be #ee4b2b and the story should be "In the dark woods, a group of friends stumbled upon an old, abandoned cabin. They enter the cabin and awaken something malevolent that had been dormant for centuries.".
+
+Step 15
+Now that the displayStory function is working correctly, it is time to add the functionality to the buttons.
+
+Before that, remove the displayStory("scary") function call.
+
+Step 16
+Modify the scaryStoryBtn event listener to call the displayStory function with the argument "scary". Also, add a click event listener to the funnyStoryBtn, and adventureStoryBtn buttons that call the displayStory function with the arguments "funny" and "adventure" respectively.
+
+With this, you have successfully completed the workshop.
