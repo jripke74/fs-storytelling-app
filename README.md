@@ -54,3 +54,21 @@ borderColor: #acd157
 
 Step 10
 Create a function called displayStory. Inside the function, log "You clicked the button" to the console.
+
+Step 11
+Add an event listener for the click event to scaryStoryBtn and pass it the displayStory function. Then, click your button and see the output in the console.
+
+Step 12
+Now, you know that the button works. Remove the console.log statement from the displayStory function.
+
+Step 13
+To differentiate between the different types of stories, you will need to pass the genre of the selected story to the displayStory function.
+
+Add a parameter called genre to the displayStory function.
+
+Step 14
+Inside the displayStory function, check if the storyObj object has a property that matches the genre parameter and set the #result paragraph's text content to the story of the selected genre.
+
+Also, set the storyContainer's border color to the borderColor property of the selected genre.
+
+Test this by calling the displayStory function with the scary genre. The border color should be #ee4b2b and the story should be "In the dark woods, a group of friends stumbled upon an old, abandoned cabin. They enter the cabin and awaken something malevolent that had been dormant for centuries.".
